@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './contexts/LanguageContext';
 
 import Layout from './components/Layout';
@@ -19,7 +19,7 @@ import Join from './pages/Join';
 export default function App() {
   return (
     <LanguageProvider>
-      <BrowserRouter>
+      <Router>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -32,7 +32,7 @@ export default function App() {
             <Route path="participar" element={<Join />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </Router>
     </LanguageProvider>
   );
 }
