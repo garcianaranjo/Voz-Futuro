@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Nunito:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Londrina Solid", display;
+  --font-sans: "Nunito", sans-serif;
+  
+  --color-brand-primary: #0097b2;
+  --color-brand-secondary: #48c2c6;
+  --color-brand-tertiary: #fabd25;
+  --color-brand-light: #f5fcfe;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  @apply antialiased text-slate-800 bg-brand-light font-sans;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 20px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
